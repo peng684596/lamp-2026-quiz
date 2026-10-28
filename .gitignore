@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# 本地临时产物
+*.tmp
+*.log
+
+# 题库解析中间产物与校对草稿（可由 tools/*.py 重新生成，不入库）
+tools/_*
+
+# 本地验证截图
+docs/_verify/
