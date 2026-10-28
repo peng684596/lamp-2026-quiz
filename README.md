@@ -108,7 +108,7 @@ git add -A && git commit -m "更新题库" && git push
 
 推送后 GitHub Pages 会在 1 分钟左右自动重新发布。
 
-> 本机 git 全局配置里有一个指向 `127.0.0.1:23501` 的 GitHub 代理，该端口未监听会导致 `push` 报 `Failed to connect to github.com:443 over proxy`。本仓库已在 `.git/config` 里用空代理覆盖处理（`[http "https://github.com"] proxy = `）；若换机器推送失败，用 `git -c http.https://github.com.proxy= push` 可绕过。
+> 本机 git 全局配置里有一个指向 `127.0.0.1:23501` 的失效 GitHub 代理，该端口未监听会导致 `push` 报 `Failed to connect to github.com:443 over proxy`。本仓库已在自身 `.git/config` 里把 `http.https://github.com.proxy` 覆盖成本机可用的 `http://127.0.0.1:21630`；若换机器或代理变了导致推送失败，用 `git -c http.https://github.com.proxy= push`（直连）或改成当前可用的代理地址即可绕开。
 
 ## 数据来源与许可
 
